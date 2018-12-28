@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 		
 		firstly{
 			HttpClient.shareClient.httpRequest(with: url, requestType: .POST, paramOfType: .FORM, parameter: param)
-		}.done{ [weak self] data in
+		}.done{ data in
 			debugPrint(JSON(data.data))
 		}.catch{ error in
 			debugPrint(error.localizedDescription)
